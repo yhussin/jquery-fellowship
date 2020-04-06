@@ -176,7 +176,7 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
   console.log('Forge the fellowship');
   // 1. create a new div with an id 'the-fellowship'
-  $('<div/>').attr('id', 'the-fellowship');
+  $('<div></div>').attr('id', 'the-fellowship');
   // 2. add an h1 with the text 'The Fellowship' to this new div
   $('#the-fellowship').html('<h1>The Fellowship</h1>');
   // 3. append the fellowship to middle-earth
@@ -226,9 +226,9 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
+  $("ul.hobbit li:first nth-child(2n)").detach().appendTo("#Mordor");
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+  $('<div id="mount-doom"/>').append("#Mordor");
 };
 
 // COMMIT YOUR WORK
