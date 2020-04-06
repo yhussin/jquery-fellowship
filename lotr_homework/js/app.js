@@ -111,11 +111,10 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-  $('#Mordor').append('<ul class="baddy"></ul>');
+  $('#Mordor').append('<ul class="baddiesList"></ul>');
   // 2. give each of the baddies a class of "baddy"
   for (let i = 0; i < baddies.length; i++) {
-    $('ul.baddy').append('<li>' + baddies[i] + '</li>');
-    // $('ul #Mordor').addClass('baddy')
+    $('ul.baddiesList').append('<li class="baddy">' + baddies[i] + '</li>');
   }
   // 3. remember to append them to Mordor
 };
@@ -127,11 +126,14 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
+  console.log("Make buddies")
   // 1. create an aside tag and append it to middle-earth below mordor
-
+  $('#Mordor').append('<aside></aside>');
   // 2. display an unordered list of buddies in the aside
-
+  $('aside').append('<ul class="buddiesList"/>');
+  for (let i = 0; i < buddies.length; i++) {
+    $('ul.buddiesList').append('<li class="buddies">' + buddies[i] + '</li>');
+  };
   // 3. give each of the buddies a class of "buddy"
 
 };
