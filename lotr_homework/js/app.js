@@ -256,11 +256,11 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  $('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+  $('.baddy').remove();
   // 3. Move all the hobbits back to the shire
-
+  $('ul.hobbit').detach().appendTo('#The-Shire');
 };
 
 // COMMIT YOUR WORK
