@@ -78,9 +78,10 @@ const makeHobbits = () => {
   // 2. give each hobbit a class of "hobbit"
   for (let i = 0; i < hobbits.length; i++) {
     $('ul').append('<li>' + hobbits[i] + '</li>');
+    $('ul').addClass('hobbit');
   }
   // hint: create a 'ul' outside the loop upon which to append the 'li's
-  $('ul').addClass('hobbit');
+  
   // hint: get 'The-Shire' by using its id
 };
 
@@ -110,9 +111,12 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+  $('#Mordor').append('<ul class="baddy"></ul>');
   // 2. give each of the baddies a class of "baddy"
-
+  for (let i = 0; i < baddies.length; i++) {
+    $('ul.baddy').append('<li>' + baddies[i] + '</li>');
+    // $('ul #Mordor').addClass('baddy')
+  }
   // 3. remember to append them to Mordor
 };
 
