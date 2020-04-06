@@ -147,7 +147,6 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
   console.log('Leave the shire')
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-  
   $('.hobbit').detach().appendTo('#Rivendell')
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -198,7 +197,6 @@ const theBalrog = () => {
   // 2. add a class "the-white" to this element
  
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
 };
 
 // COMMIT YOUR WORK
@@ -226,7 +224,8 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-  $("ul.hobbit li:first nth-child(2n)").detach().appendTo("#Mordor");
+  $("ul.hobbit li:first").detach().appendTo("#Mordor");
+  $("ul.hobbit li:nth-child(1n)").detach().appendTo("#Mordor");
   // 2. add a div with an id of 'mount-doom' to Mordor
   $('<div id="mount-doom"/>').append("#Mordor");
 };
@@ -240,11 +239,12 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+  $('#Mordor').append('<div id="gollum"/>');
   // 2. Move the ring from Frodo and give it to Gollum
-
+  $("#the-ring").detach().appendTo("#gollum");
   // 3. Move Gollum into Mount Doom
-
+  $("#gollum").detach().appendTo("#mount-doom");
+ 
 };
 
 // COMMIT YOUR WORK
