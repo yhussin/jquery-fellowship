@@ -210,11 +210,11 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+  alert("The horn of gondor has been blown!");
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+  $('ul.buddiesList li:last').css('text-decoration', 'line-through');
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  $('ul.baddiesList li:nth-child(3n)').remove();
 };
 
 // COMMIT YOUR WORK
